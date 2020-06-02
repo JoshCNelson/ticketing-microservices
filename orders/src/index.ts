@@ -12,7 +12,7 @@ import { ExpirationCompleteListener } from './events/listeners/expiration-comple
 import { PaymentCreatedListener } from './events/listeners/payment-created-listener';
 
 const start = async () => {
-  console.log('starting orders server...');
+  console.log('starting orders server');
   // Adding this check for JWT_KEY at boot to detect early
   if (!process.env.JWT_KEY) { throw new Error('JWT_KEY must be defined'); }
   if (!process.env.MONGO_URI) { throw new Error('MONGO_URI must be defined'); }
