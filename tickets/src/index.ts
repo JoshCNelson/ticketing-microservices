@@ -10,6 +10,7 @@ import { OrderCreatedListener } from './events/listeners/order-created-listener'
 import { OrderCancelledListener } from './events/listeners/order-cancelled-listener';
 
 const start = async () => {
+  console.log('starting tickets')
   // Adding this check for JWT_KEY at boot to detect early
   if (!process.env.JWT_KEY) { throw new Error('JWT_KEY must be defined'); }
   if (!process.env.MONGO_URI) { throw new Error('MONGO_URI must be defined'); }
